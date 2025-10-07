@@ -19,7 +19,7 @@ getConn = open "./haskell-servantDB"
 fetchPersonsQ :: IO [Person]
 fetchPersonsQ = do
     conn <- getConn
-    personList <- query_ conn "SELECT * FROM person;"
+    personList <- query_ conn "SELECT * FROM persons;"
     pure personList
 
 test :: IO ()
